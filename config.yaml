@@ -1,0 +1,13 @@
+server:
+  port: 19998
+
+mysql:
+  host: "111.230.203.95"
+  port: "3306"
+  database: "trip_map"
+  username: "root"
+  password: "0427"
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
