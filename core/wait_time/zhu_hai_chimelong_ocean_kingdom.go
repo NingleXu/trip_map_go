@@ -126,18 +126,10 @@ func parseWaitTime(waitingTime string) int64 {
 		return 0
 	}
 
-	// 处理数字+分钟的情况
-	if strings.Contains(waitingTime, "分钟") {
-		// 提取数字部分
-		numStr := strings.TrimSuffix(waitingTime, "分钟")
-		numStr = strings.TrimSpace(numStr)
-
-		if minutes, err := strconv.ParseInt(numStr, 10, 64); err == nil {
-			return minutes
-		}
+	if minutes, err := strconv.ParseInt(waitingTime, 10, 64); err == nil {
+		return minutes
 	}
 
-	// 处理其他格式或无法解析的情况
 	return 0
 }
 

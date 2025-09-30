@@ -24,3 +24,13 @@ func GetScenicAreaListByPage(c *gin.Context) {
 
 	response.OkWithData(res, c)
 }
+
+func GetScenicSpotWaitTimeList(c *gin.Context) {
+	cId, date := c.Query("scenicId"), c.Query("date")
+	records, err := service.GetScenicSpotWaitTimeList(cId, date)
+	if err != nil {
+		response.FailWithMessage("查询等待时间失败", c)
+		return
+	}
+	response.OkWithData(records, c)
+}

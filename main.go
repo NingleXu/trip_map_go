@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"trip-map/config"
 	"trip-map/internal/bootstrap"
+	"trip-map/schedule"
 )
 
 func main() {
@@ -25,4 +26,6 @@ func initSystem(r *gin.Engine) {
 	bootstrap.InitRouter(r)
 	// 初始化db
 	bootstrap.InitDB()
+	// 启动等待时间数据定时抓取任务
+	schedule.StartGlobalScheduler()
 }

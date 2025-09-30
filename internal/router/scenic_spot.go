@@ -33,4 +33,6 @@ func (ssr *ScenicSpotRouter) InitRouter(r *gin.RouterGroup) {
 	r.GET("/getWaitTimeScenicAreaList", v1.GetWaitTimeScenicAreaList)
 	// 查询景区的景点等待时间
 	r.GET("/getScenicAreaWaitTimeList", v1.GetScenicAreaWaitTimeList)
+	// 查询景点的等待时间
+	r.GET("/getScenicSpotWaitTimeList", v1.GetScenicSpotWaitTimeList)
 }

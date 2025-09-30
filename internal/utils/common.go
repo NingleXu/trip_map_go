@@ -4,6 +4,7 @@ import (
 	"math"
 	"strconv"
 	"strings"
+	"time"
 	"trip-map/internal/model/common"
 )
 
@@ -57,4 +58,8 @@ func BD09ToGCJ02(bdPoint *common.Point) *common.Point {
 		Lng: ggLng,
 		Lat: ggLat,
 	}
+}
+
+func GetDateString(t time.Time) string {
+	return t.Format("2006-01-02")
 }
