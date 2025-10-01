@@ -28,6 +28,7 @@ type WaitTimeHandler interface {
 var ScenicAreaWaitTimeHandlerMap = map[string]WaitTimeHandler{
 	"7469417":   NewZhuHaiChimelongOceanKingdom(), // 珠海长隆海洋王国
 	"100000036": NewBeijingUniversalStudios(),     // 北京环球影城 (景区ID待确认)
+	"7564992":   NewShanghaiDisney(),              // 上海迪士尼度假区 (景区ID待确认)
 }
 
 type BaseHandler struct {
